@@ -8,15 +8,15 @@
 //------------------------------------------------------------------------------
 public static class GameComponentsLookup {
 
+    public const int DebugFPS = 0;
 
-
-    public const int TotalComponents = 0;
+    public const int TotalComponents = 1;
 
     public static readonly string[] componentNames = {
-
+        "DebugFPS"
     };
 
     public static readonly System.Type[] componentTypes = {
-
+        typeof(DebugFPSComponent)
     };
 }
