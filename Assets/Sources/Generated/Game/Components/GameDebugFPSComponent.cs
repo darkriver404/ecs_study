@@ -11,17 +11,17 @@ public partial class GameEntity {
     public DebugFPSComponent debugFPS { get { return (DebugFPSComponent)GetComponent(GameComponentsLookup.DebugFPS); } }
     public bool hasDebugFPS { get { return HasComponent(GameComponentsLookup.DebugFPS); } }
 
-    public void AddDebugFPS(string newMessage) {
+    public void AddDebugFPS(float newFps) {
         var index = GameComponentsLookup.DebugFPS;
         var component = CreateComponent<DebugFPSComponent>(index);
-        component.message = newMessage;
+        component.fps = newFps;
         AddComponent(index, component);
     }
 
-    public void ReplaceDebugFPS(string newMessage) {
+    public void ReplaceDebugFPS(float newFps) {
         var index = GameComponentsLookup.DebugFPS;
         var component = CreateComponent<DebugFPSComponent>(index);
-        component.message = newMessage;
+        component.fps = newFps;
         ReplaceComponent(index, component);
     }
 
